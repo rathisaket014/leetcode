@@ -2,7 +2,7 @@ class NumberContainers {
 
     private Map<Integer, Integer> idxToNum;
 
-    private Map<Integer, TreeSet<Integer>> numToIdx;
+    private Map<Integer, TreeSet<Integer>> numToIdx; // java version of sorted set
 
     public NumberContainers() {
         idxToNum = new HashMap<>();
