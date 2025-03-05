@@ -3,25 +3,36 @@
  * @return {Object}
  */
 var expect = function(val) {
-    function toBe(val1) {
-        if (val === val1) {
-            return true
-        } else {
-            throw new Error('Not Equal')
-        }
-    }
+    // function toBe(val1) {
+    //     if (val === val1) {
+    //         return true
+    //     } else {
+    //         throw new Error('Not Equal')
+    //     }
+    // }
 
-    function notToBe(val1) {
-        if (val !== val1) {
-            return true
-        } else {
-            throw new Error('Equal')
-        }
-    }
+    // function notToBe(val1) {
+    //     if (val !== val1) {
+    //         return true
+    //     } else {
+    //         throw new Error('Equal')
+    //     }
+    // }
+
+    // return {
+    //     toBe, 
+    //     notToBe
+    // }
 
     return {
-        toBe, 
-        notToBe
+        toBe: function(val2) {
+            if (val === val2) return true
+            else throw new Error('Not Equal')
+        },
+        notToBe: function(val2) {
+            if (val !== val2) return true
+            else throw new Error('Equal')
+        }
     }
 };
 
