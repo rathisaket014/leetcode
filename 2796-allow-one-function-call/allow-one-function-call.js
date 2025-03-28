@@ -5,10 +5,10 @@
 var once = function(fn) {
     let flag = false;
     let res;
-    return function(){
+    return function(...args){
         if (!flag) {
             flag = true
-            res = fn.apply(this, arguments)
+            res = fn(...args)
             return res
         } else {
             return undefined
