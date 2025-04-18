@@ -15,12 +15,25 @@ class Solution {
 
         // return false;
 
-        Arrays.sort(nums);
+        // Arrays.sort(nums); O(nlogn)
 
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == nums[i - 1]) {
+        // for (int i = 1; i < nums.length; i++) {
+        //     if (nums[i] == nums[i - 1]) {
+        //         return true;
+        //     }
+        // }
+
+        // return false;
+
+        // O(n)
+        HashSet<Integer> set = new HashSet<>();
+
+        for (int num : nums) {
+            if (set.contains(num)) {
                 return true;
             }
+
+            set.add(num);
         }
 
         return false;
