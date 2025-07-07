@@ -11,7 +11,7 @@ class Solution {
                 nums[i] = nums[j];
             }
         }
-
+        
         res = i + 1;
         return res;
     }
